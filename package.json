@@ -1,0 +1,76 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "notes",
+  "title": "Notes",
+  "description": "Search Notes",
+  "icon": "command-icon.png",
+  "author": "mblode",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search",
+      "title": "Search Notes",
+      "description": "Search Notes",
+      "mode": "view"
+    },
+    {
+      "name": "create",
+      "title": "Create New Note",
+      "description": "Create New Note",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "notesDirectories",
+      "type": "textfield",
+      "required": true,
+      "title": "Path to notes directory",
+      "description": "Specify the path or multiple paths (comma separated) to your directories",
+      "placeholder": "path/to/notes/dir"
+    },
+    {
+      "name": "excludedFolders",
+      "type": "textfield",
+      "placeholder": "folder1, folder2, ...",
+      "title": "Exclude following folders",
+      "required": false,
+      "description": "Specify which folders to exclude (comma separated)"
+    },
+    {
+      "name": "removeYAML",
+      "label": "Hide content",
+      "type": "checkbox",
+      "title": "Hide YAML",
+      "required": false,
+      "description": "Hide YAML frontmatter for copying and viewing notes"
+    },
+    {
+      "name": "removeLinks",
+      "label": "Hide content",
+      "type": "checkbox",
+      "title": "Hide Links",
+      "required": false,
+      "description": "Hide links for copying and viewing notes"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.26.3",
+    "open": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "ray lint"
+  }
+}
